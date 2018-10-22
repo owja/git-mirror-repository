@@ -1,0 +1,23 @@
+#!/bin/sh
+
+if [ $# -ne 2 ] ; then
+    echo "This script needs two parameters:"
+	echo "git-mirror-repository [source] [target]"
+	exit 1
+fi
+
+MIRROR_DIR=$TMPDIR/git-mirror-$(date +%s)
+
+mkdir -p $MIRROR_DIR
+
+git clone --mirror $1 $MIRROR_DIR
+
+if [ $? -ne 0 ] ; then
+    echo "Cloning repository \"$1\" failed."
+	exit 1
+fi
+
+cd $MIRROR_DIR
+git push --mirror $2
+
+rm -rf $MIRROR_DIR || true
