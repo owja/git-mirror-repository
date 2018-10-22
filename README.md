@@ -1,5 +1,9 @@
 # Git Mirror Repository
 
+[![Docker Build Status](https://img.shields.io/docker/build/owja/git-mirror-repository.svg)](https://hub.docker.com/r/owja/git-mirror-repository/)
+[![Docker Image Size](https://images.microbadger.com/badges/image/owja/git-mirror-repository.svg)](https://hub.docker.com/r/owja/git-mirror-repository/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/owja/git-mirror-repository.svg)](https://hub.docker.com/r/owja/git-mirror-repository/)
+
 A simple docker image for mirroring a git repository to another server. This is created with a Gitlab CI Runner in mind.
 
 ### Usage
